@@ -11,6 +11,7 @@
 
   <body>
     <header>
+      <div class = container>
       <h1>Bookers</h1>
       <!-- ログイン前 -->
       <ul>
@@ -19,12 +20,17 @@
         <li>sign up</li>
         <li>login</li>
       </ul>
+      </div>
     </header>
 
+    <main class = "container" >
     <%= yield %>
+    </main>
 
     <footer>
-      <p>CopyRight Infratop.inc</p>
+      <div  class = "container">
+      <p class = "pull-right">CopyRight Infratop.inc</p>
+      </div>
     </footer>
   </body>
 </html>
