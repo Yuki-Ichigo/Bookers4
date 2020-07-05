@@ -14,12 +14,21 @@
       <div class = container>
       <h1>Bookers</h1>
       <!-- ログイン前 -->
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>sign up</li>
-        <li>login</li>
-      </ul>
+      <% if user_signed_in? %>
+        <ul>
+          <li>Home</li>
+          <li>Users</li>
+          <li>Books</li>
+          <li>Home</li>
+        </ul>
+      <% else %>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>sign up</li>
+          <li>login</li>
+        </ul>
+      <% end %>
       </div>
     </header>
 
