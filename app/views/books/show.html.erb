@@ -1,13 +1,20 @@
-★ユーザーインフォ・New　bookはこの辺にいれる★
+★ユーザーインフォ・Newbookはこの辺にいれる★
 
 <div class="col-xs-9">
     <h2>Book detail</h2>
 	<table class = "table">
 		<tbody>
 			<tr>
-				<td class="col-xs-2"><%= attachment_image_tag @book.user, :profile_image, :fill, 100, 100, format: 'jpeg' %></td>
+				<td class="col-xs-2">
+					<p><%= attachment_image_tag @book.user, :profile_image, :fill, 30, 30, format: 'jpeg' %></p>
+					<p><%= link_to user_path(@book.user_id) do %>
+							<%= @book.user.name %>
+                       <% end %></p>
+				</td>
 				<td class="col-xs-3"><%= @book.title %></td>
 				<td class="col-xs-2"><%= @book.body %></td>
+				<td><%= link_to edit_book_path(@book.id) do %><button class="btn-sm btn-success">Edit</button><% end %></td>
+				<td><button class="btn-sm btn-danger">Destroy</button></td>
 			</tr>
 		</tbody>
 	</table>

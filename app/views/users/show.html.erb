@@ -1,1 +1,26 @@
-showぺーじ
+
+<div class="col-xs-9">
+	<h2>Books</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Title</th>
+				<th>Opinion</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @user_books.each do |user_book| %>
+			    <tr>
+					<td><%= attachment_image_tag user_book.user, :profile_image, :fill, 50, 50, format: 'jpeg' %></td>
+					<td>
+						<%= link_to book_path(user_book.id) do %>
+							<%= user_book.title %>
+						<% end %>
+					</td>
+					<td><%= user_book.body %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
