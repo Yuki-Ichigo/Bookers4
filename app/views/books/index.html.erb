@@ -1,4 +1,15 @@
 ★ユーザーインフォ、投稿ページはこの辺に入れる★
+<% if @book.errors.any? %>
+	<div id="error_explanation" class="alert alert-danger">
+		<h3><%= @book.errors.count %>errors</h3>
+		<ul>
+			<% @book.errors.full_messages.each do  |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+
 
 <div class="col-xs-9">
     <h2>Books</h2>
