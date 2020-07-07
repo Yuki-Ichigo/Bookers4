@@ -5,16 +5,16 @@
 	<table class = "table">
 		<tbody>
 			<tr>
-				<td class="col-xs-2">
+				<td class="col-xs-1">
 					<p><%= attachment_image_tag @book.user, :profile_image, :fill, 30, 30, format: 'jpeg' %></p>
 					<p><%= link_to user_path(@book.user_id) do %>
 							<%= @book.user.name %>
                        <% end %></p>
 				</td>
-				<td class="col-xs-3"><%= @book.title %></td>
-				<td class="col-xs-2"><%= @book.body %></td>
-				<td><%= link_to edit_book_path(@book.id) do %><button class="btn-sm btn-success">Edit</button><% end %></td>
-				<td><button class="btn-sm btn-danger">Destroy</button></td>
+				<td class="col-xs-2"><%= @book.title %></td>
+				<td class="col-xs-4"><%= @book.body %></td>
+				<td class="col-xs-1"><%= link_to edit_book_path(@book.id) do %><button class="btn-sm btn-success">Edit</button><% end %></td>
+				<td class="col-xs-1"><%= link_to book_path(@book.id),method: :delete do %><button class="btn-sm btn-danger">Destroy</button><% end %></td>
 			</tr>
 		</tbody>
 	</table>
