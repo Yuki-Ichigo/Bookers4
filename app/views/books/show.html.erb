@@ -13,8 +13,20 @@
 				</td>
 				<td class="col-xs-2"><%= @book.title %></td>
 				<td class="col-xs-4"><%= @book.body %></td>
-				<td class="col-xs-1"><%= link_to edit_book_path(@book.id) do %><button class="btn-sm btn-success">Edit</button><% end %></td>
-				<td class="col-xs-1"><%= link_to book_path(@book.id),method: :delete do %><button class="btn-sm btn-danger">Destroy</button><% end %></td>
+				<td class="col-xs-1">
+					<% if @book.user == current_user %>
+						<%= link_to edit_book_path(@book.id) do %>
+							<button class="btn-sm btn-success">Edit</button>
+						<% end %>
+					<% end %>
+				</td>
+				<td class="col-xs-1">
+					<% if @book.user == current_user %>
+						<%= link_to book_path(@book.id),method: :delete do %>
+							<button class="btn-sm btn-danger">Destroy</button>
+						<% end %>
+					<% end %>
+				</td>
 			</tr>
 		</tbody>
 	</table>
