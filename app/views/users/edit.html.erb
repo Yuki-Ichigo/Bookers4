@@ -1,3 +1,14 @@
+<% if @user.errors.any? %>
+	<div id="error_explanation" class="alert alert-danger">
+		<h3><%= @user.errors.count %>errors</h3>
+		<ul>
+			<% @user.errors.full_messages.each do  |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+
 <h2>User info</h2>
 <%= form_for(@user,url:"/users/#{@user.id}") do |f| %>
 <div class="field">

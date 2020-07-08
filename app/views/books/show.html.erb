@@ -22,8 +22,8 @@
 				</td>
 				<td class="col-xs-1">
 					<% if @book.user == current_user %>
-						<%= link_to book_path(@book.id),method: :delete do %>
-							<button class="btn-sm btn-danger">Destroy</button>
+						<%= link_to book_path(@book.id),method: :delete, data: {confirm: "本当に消しますか？"} do %>
+							<button class="btn-sm btn-danger" >Destroy</button>
 						<% end %>
 					<% end %>
 				</td>
