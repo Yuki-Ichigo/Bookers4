@@ -10,9 +10,12 @@
   </head>
 
   <body>
-    <header>
+    <header class="navbar navbar-fixed-top navbar-inverse">
       <div class = "container">
-      <h1>Bookers</h1>
+        <nav class="nav navbar-nav navbar-left">
+          <span><font size="4" color="#ffffff">Bookers</font></span>
+        </nav>
+
       <!-- ログイン前 -->
       <% if user_signed_in? %>
         <ul class = "nav navbar-nav navbar-right" date-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
@@ -65,6 +68,9 @@
     </header>
 
     <main class = "container" >
+      <br>
+      <br>
+      <br>
       <% flash.each do |key, value| %>
         <%= content_tag(:div, value, class: "#{key}") %>
       <% end %>
