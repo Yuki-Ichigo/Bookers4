@@ -4,13 +4,9 @@
 <p>about various books!</p>
 
 <div>
-	<button class="btn btn-info col-xs-10 col-xs-offset-1 sign_in" type="button" name="aaa" value="aaa">
-	<%= link_to "Log in", new_user_session_path %>
-</button>
+	<%= link_to "Log in", new_user_session_path, class: "btn btn-info col-xs-10 col-xs-offset-1 sign_in" %>
 </div>
 
 <div>
-	<button class="btn btn-success col-xs-10 col-xs-offset-1 sign_up" type="button" name="aaa" value="aaa">
-		<%= link_to "Sign Up", new_user_registration_path %>
-	</button>
+	<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success col-xs-10 col-xs-offset-1 sign_up" %>
 </div>
