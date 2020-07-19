@@ -11,11 +11,9 @@
 		<td><%= user.introduction %></td>
 	</tr>
     </table>
-    <button class="btn btn-default btn-block">
-		<%= link_to edit_user_path(user.id)  do %>
+   	<%= link_to edit_user_path(user.id), class: "btn btn-default btn-block"  do %>
 		<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-		<% end %>
-	</button>
+	<% end %>
 
     <h2>New book</h2>
 	<%= form_for (book) do |f| %>
